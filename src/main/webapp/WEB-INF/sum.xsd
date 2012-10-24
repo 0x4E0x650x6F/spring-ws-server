@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:hr="http://mycompany.com/hr/schemas" elementFormDefault="qualified"
+	targetNamespace="http://mycompany.com/hr/schemas">
+	
+	<xs:complexType name="SumType">
+		<xs:sequence>
+			<xs:element name="a" type="xs:integer" />
+			<xs:element name="b" type="xs:integer" />
+		</xs:sequence>
+	</xs:complexType>
+	
+    <xs:element name="SumRequest">
+    	<xs:complexType>
+			<xs:all>
+				<xs:element name="SUM" type="hr:SumType"/>
+			</xs:all>
+		</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="SumResponse">
+    	<xs:complexType>
+			<xs:all>
+				<xs:element name="Result" type="xs:integer"/>
+			</xs:all>
+		</xs:complexType>
+    </xs:element>
+    
+</xs:schema>
